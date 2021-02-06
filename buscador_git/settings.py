@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'orgs',
+    'buscador_git.orgs',
     'rest_framework',
 ]
 
@@ -80,7 +80,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'orgs',
         'USER': 'teste',
-        'PASSWORD': '123Teste!',
+        'PASSWORD': '123Mudar!',
         'HOST': '127.0.0.1',
         'PORT': '5432',
     }
