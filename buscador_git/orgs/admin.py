@@ -1,4 +1,4 @@
 from django.contrib import admin
-from buscador_git.orgs.models import Empresa
+from buscador_git.orgs.models import Org
 
-admin.site.register(Empresa)
+admin.site.register(Org)

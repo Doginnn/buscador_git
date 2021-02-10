@@ -1,31 +1,16 @@
 from rest_framework import viewsets
-from buscador_git.orgs.serializers import EmpresaSerializer
-from buscador_git.orgs.models import Empresa
+from buscador_git.orgs.serializers import OrgSerializer
+from buscador_git.orgs.models import Org
+from github import Github
+
+ACCESS_TOKEN = '21838791231789ecbc4b3de3576e2ba549b66550'
+g = Github(ACCESS_TOKEN)
 
 
-class EmpresaViewSet(viewsets.ModelViewSet):
-    serializer_class = EmpresaSerializer
-    queryset = Empresa.objects.all()
+class OrgViewSet(viewsets.ModelViewSet):
+    serializer_class = OrgSerializer
+    queryset = Org.objects.all()
 
-
-# from github import Github
-#
-# ACCESS_TOKEN = 'put your token here'
-#
-# g = Github(ACCESS_TOKEN)
-#
-#
-# def search_github(keywords):
-#     query = '+'.join(keywords) + '+in:readme+in:description'
-#     result = g.search_repositories(query, 'stars', 'desc')
-#
-#     print(f'Found {result.totalCount} repo(s)')
-#
-#     for repo in result:
-#         print(f'{repo.clone_url}, {repo.stargazers_count} stars')
-#
-#
-# if __name__ == '__main__':
-#     keywords = input('Enter keyword(s)[e.g python, flask, postgres]: ')
-#     keywords = [keyword.strip() for keyword in keywords.split(',')]
-#     search_github(keywords)
+    def search_github():
+        print()
+    search_github()

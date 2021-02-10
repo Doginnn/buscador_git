@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from buscador_git.orgs.models import Empresa
+from buscador_git.orgs.models import Org
 
 
-class EmpresaSerializer(serializers.ModelSerializer):
+class OrgSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Empresa
+        model = Org
         fields = '__all__'
